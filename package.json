@@ -1,0 +1,14 @@
+{
+  "name": "cy-project",
+  "version": "1.0.0",
+  "description": "Cy Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Renato Santos",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.1.0"
+  }
+}

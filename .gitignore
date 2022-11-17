@@ -1,0 +1,5 @@
+#Usually sensitive data
+.env
+
+#Not needed (get from package.json)
+/node_modules
