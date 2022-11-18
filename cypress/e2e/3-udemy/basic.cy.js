@@ -19,9 +19,8 @@ describe('Cypress basics', () => {
 
         cy.title()
            .should('be.equal', 'Campo de Treinamento')
-            .should('contain', 'Campo');
-
-        //TODO Imprimir o title no consolelog
+            .should('contain', 'Campo')
+            .then(console.log);
         //TODO Escrever o title em um campo de texto
 
     })
