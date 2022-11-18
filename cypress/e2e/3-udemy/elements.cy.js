@@ -91,13 +91,13 @@ describe('Work with basic elements', () => {
             //TODO Validar opções do combo
     })
 
-    it.only('Combobox Multiplo', () => {
+    it('Combobox Multiplo', () => {
         //cy.get('[data-testid="dataEsportes"]')
         //   .select([0,1]);
         
         cy.get('[data-testid="dataEsportes"]')
            .select(['natacao','Karate','nada']);
-           //TODO Validar opçõesselecionadas do combo múltiplo
+           //TODO Validar opções selecionadas do combo múltiplo
     })
 
 })
