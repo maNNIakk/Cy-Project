@@ -80,7 +80,7 @@ describe('Work with basic elements', () => {
 
     })
 
-    it.only('Combobox', () => {
+    it('Combobox', () => {
         cy.get('[data-test="dataEscolaridade"]')
            .select('2o grau completo')
             .should('have.value','2graucomp');
@@ -88,6 +88,16 @@ describe('Work with basic elements', () => {
         cy.get('[data-test="dataEscolaridade"]')
            .select('1graucomp')
             .should('have.value','1graucomp');
+            //TODO Validar opções do combo
+    })
+
+    it.only('Combobox Multiplo', () => {
+        //cy.get('[data-testid="dataEsportes"]')
+        //   .select([0,1]);
+        
+        cy.get('[data-testid="dataEsportes"]')
+           .select(['natacao','Karate','nada']);
+           //TODO Validar opçõesselecionadas do combo múltiplo
     })
 
 })
