@@ -48,18 +48,25 @@ describe('Esperas', () => {
             .should('contain','Item 2')
     })
 
-    it.only('Timeout and Retry', () => {
+    it('Timeout and Retry', () => {
         //cy.get('#novoCampo').should('exist');
         //cy.get('#buttonListDOM').click();
         //cy.get('#lista li span', {timeout:30000})
         //    .should('contain','Item 2');
         cy.get('#buttonListDOM').click();
-        cy.get('#lista li span')
+        cy.get('#lista li span', {timeout:30000})
            .should('have.length',1)
-        cy.get('#lista li span')
+        // cy.get('#lista li span')
             .should('have.length',2)
 
 
+    })
+
+    it.only('Should vs Then', () =>{
+        cy.get('#buttonListDOM').click();
+        cy.get('#lista li span').then($el => {
+           expect($el).to.have.length(1)
+        })
     })
 
 })
